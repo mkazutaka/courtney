@@ -1,6 +1,6 @@
-module github.com/dave/courtney
+module github.com/mkazutaka/courtney
 
-go 1.12
+go 1.18
 
 require (
 	github.com/dave/astrid v0.0.0-20170323122508-8c2895878b14

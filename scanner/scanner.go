@@ -9,7 +9,7 @@ import (
 
 	"github.com/dave/astrid"
 	"github.com/dave/brenda"
-	"github.com/dave/courtney/shared"
+	"github.com/mkazutaka/courtney/shared"
 	"github.com/pkg/errors"
 	"golang.org/x/tools/go/packages"
 )
@@ -229,18 +229,18 @@ func (f *FileMap) inspectNode(node ast.Node) (bool, error) {
 		}
 		var falseExpr []ast.Expr
 		var defaultClause *ast.CaseClause
-		for _, s := range n.Body.List {
-			cc := s.(*ast.CaseClause)
-			if cc.List == nil {
-				// save the default clause until the end
-				defaultClause = cc
-				continue
-			}
-			if err := f.inspectCase(cc, falseExpr...); err != nil {
-				return false, err
-			}
-			falseExpr = append(falseExpr, f.boolOr(cc.List))
-		}
+		//for _, s := range n.Body.List {
+		//	cc := s.(*ast.CaseClause)
+		//	if cc.List == nil {
+		//		// save the default clause until the end
+		//		defaultClause = cc
+		//		continue
+		//	}
+		//	if err := f.inspectCase(cc, falseExpr...); err != nil {
+		//		return false, err
+		//	}
+		//	falseExpr = append(falseExpr, f.boolOr(cc.List))
+		//}
 		if defaultClause != nil {
 			if err := f.inspectCase(defaultClause, falseExpr...); err != nil {
 				return false, err

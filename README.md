@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/dave/courtney.svg?branch=master)](https://travis-ci.org/dave/courtney) [![Go Report Card](https://goreportcard.com/badge/github.com/dave/courtney)](https://goreportcard.com/report/github.com/dave/courtney) [![codecov](https://codecov.io/gh/dave/courtney/branch/master/graph/badge.svg)](https://codecov.io/gh/dave/courtney)
+[![Build Status](https://travis-ci.org/dave/courtney.svg?branch=master)](https://travis-ci.org/dave/courtney) [![Go Report Card](https://goreportcard.com/badge/github.com/mkazutaka/courtney)](https://goreportcard.com/report/github.com/mkazutaka/courtney) [![codecov](https://codecov.io/gh/dave/courtney/branch/master/graph/badge.svg)](https://codecov.io/gh/dave/courtney)
 
 # Courtney
 
@@ -62,7 +62,7 @@ that the other result parameters are zero values.
 
 # Install
 ```
-go get -u github.com/dave/courtney 
+go get -u github.com/mkazutaka/courtney 
 ```
 
 # Usage
@@ -92,7 +92,7 @@ courtney github.com/dave/a/... github.com/dave/b
 The command will exit with an error if any code remains uncovered. Combining a 
 CI system with a fully tested package and the `-e` flag is extremely useful. It 
 ensures any pull request has tests that cover all new code. For example, [here 
-is a PR](https://github.com/dave/courtney/pull/5) for this project that lacks 
+is a PR](https://github.com/mkazutaka/courtney/pull/5) for this project that lacks 
 tests. As you can see the Travis build failed with a descriptive error. 
 
 ### Output: -o
@@ -131,7 +131,7 @@ notificaitons:
     recipients: <your-email>
     on_failure: always
 install:
-  - go get -u github.com/dave/courtney
+  - go get -u github.com/mkazutaka/courtney
   - go get -t -v ./...
 script:
   - courtney
@@ -151,7 +151,7 @@ notificaitons:
     on_failure: always
 install:
   - go get -u github.com/mattn/goveralls
-  - go get -u github.com/dave/courtney
+  - go get -u github.com/mkazutaka/courtney
   - go get -t -v ./...
 script:
   - courtney

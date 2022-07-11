@@ -9,7 +9,7 @@ notificaitons:
     on_failure: always
 install:
   - go get -u github.com/mattn/goveralls                    # only for coveralls.io
-  - go get -u github.com/dave/courtney
+  - go get -u github.com/mkazutaka/courtney
   - go get -t -v ./...
 script:
   - courtney -e -v

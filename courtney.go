@@ -8,11 +8,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/dave/courtney/scanner"
-	"github.com/dave/courtney/shared"
-	"github.com/dave/courtney/tester"
 	"github.com/dave/patsy"
 	"github.com/dave/patsy/vos"
+	"github.com/mkazutaka/courtney/scanner"
+	"github.com/mkazutaka/courtney/shared"
+	"github.com/mkazutaka/courtney/tester"
 )
 
 func main() {
